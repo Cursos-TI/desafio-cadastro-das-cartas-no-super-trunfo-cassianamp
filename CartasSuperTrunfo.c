@@ -8,12 +8,13 @@ int main() {
     char estado;
     char codigoCarta[5] = "";
     char nomeCidade[30] = "";
-    int populacao;
+    unsigned long int populacao;
     float area;
     float pib;
     int pontosTuristicos;
     float densidadePop;
     float pibPerCapita;
+    float superPoder;
 
 
     
@@ -29,7 +30,7 @@ int main() {
     scanf("%s", nomeCidade);
     
     printf("Digite o número de habitantes da cidade: ");
-    scanf("%d", &populacao);
+    scanf("%lu", &populacao);
     
     printf("Digite a área da cidade em quilômetros quadrados: ");
     scanf("%f", &area);
@@ -52,12 +53,17 @@ int main() {
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codigoCarta);
     printf("Nome da Cidade: %s\n", nomeCidade);
-    printf("População: %d\n", populacao);
+    printf("População: %lu\n", populacao);
     printf("Área: %.2f\n", area);
     printf("PIB: %.2f\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos);
     printf("Densidade Populacional: %.2f\n", densidadePop);
     printf("PIB per Capita: %.2f\n", pibPerCapita);
+
+    // Calculo do Super Poder
+    superPoder = (float) populacao + area + pib + pontosTuristicos + pibPerCapita + (1/densidadePop);
+
+    printf("Super Poder: %.2f\n", superPoder);
 
 
 
@@ -73,7 +79,7 @@ int main() {
     scanf("%s", nomeCidade);
     
     printf("Digite o número de habitantes da cidade: ");
-    scanf("%d", &populacao);
+    scanf("%lu", &populacao);
     
     printf("Digite a área da cidade em quilômetros quadrados: ");
     scanf("%f", &area);
@@ -96,12 +102,25 @@ int main() {
     printf("Estado: %c\n", estado);
     printf("Código: %s\n", codigoCarta);
     printf("Nome da Cidade: %s\n", nomeCidade);
-    printf("População: %d\n", populacao);
+    printf("População: %lu\n", populacao);
     printf("Área: %.2f\n", area);
     printf("PIB: %.2f\n", pib);
     printf("Número de Pontos Turísticos: %d\n", pontosTuristicos);
     printf("Densidade Populacional: %.2f\n", densidadePop);
     printf("PIB per Capita: %.2f\n", pibPerCapita);
+
+    // Calculo do Super Poder
+    superPoder = (float) populacao + area + pib + pontosTuristicos + pibPerCapita + (1/densidadePop);
+
+    printf("Super Poder: %.2f\n", superPoder);
+
+
+    // Calculos para comparação das cartas
+    
+
+
+    // Exibição do resultado das comparações
+    printf("\nComparação de Cartas\n");
 
 
     return 0;
